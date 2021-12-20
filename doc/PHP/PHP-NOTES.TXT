@@ -771,6 +771,112 @@ in python : __name__,__main__,__init(self)__
 in javascript : __proto__
 
 
+1. Mangled Super Global Varaible : are the varaible whose naming 
+convention is such that, they are declared using $ but have _ at prefix.
+
+for eg : normal varible $name,$class , $_SERVER, $_REQUEST,$_GET,$_POST
+
+2. Non-Mangled Super Global Varaible. are the variable whose naming convention are like normal variables and use no special prefixing like _ or __ they can be treated as normal variable in case naming convention only.
+
+for eg: $name, $class,$marks, $GLOBAlS,$argc,$argc,$http_​response_​header,
+$php_errormsg
+
+what is the difference B/w normal varaible and super global varaible:-
+
+1. SGV, are predefined but normal varaible are user defined.
+2. SGv, have global scope and normal varaible have local scope.
+3. normal variable do not have concept called name mangaling but super 
+   global variable have.
+   
+$GLOBALS : BOTH SAPI (CGI+CLI)
+$_SERVER : BOTH SAPI (CGI+CLI) But Environment Dependent.
+$_GET : SAPI :CGI
+$_POST :  SAPI :CGI
+$_FILES :  SAPI :CGI
+$_COOKIE : SAPI :CGI
+$_SESSION :  SAPI :CGI
+$_REQUEST : SAPI :CGI
+$_ENV : SAPI :CGI | CLI
+
+Other Super Global Variable :-
+$http_​response_​header : SAPI:CGI
+$argc : CLI
+$argv : CLI
+$php_​errormsg : BOTH | CLI | CGI
+
+What is SAPI?
+1. SAPI stands for server/system Application Programming Interface.
+it is,a type of Service, which recognises, the environment in which 
+execution of the program takes place.
+This service is, handled by Web-Server.
+
+wap in php to show different sapi name at different environment.
+Ans : Consider sapi.php
+
+<?php
+
+echo php_sapi_name();
+
+?>
+1. php sapi.php //cli
+2. php -S localhost:8000 //cli-server
+3. apache(laragon) ---> http://localhost:786/sapi.php //apache2handler
+							
+1)	what is sapi of $name='Ravi';?
+	a)cli
+	b)cgi
+	c)both (correct)
+	d)this is not super-global varible.
+
+2) what is correct value for $argc when you are running it at url : http://localhost:786/p1.php ?
+
+1) 1
+2) 2
+3) 0 (correct)
+4) 3
+
+Command line Arguments in PHP
+*********************************
+In Any Programming, langauge there are two types of inputs Environment.
+	1. Runtime Input : inputs or, arguments supplied during program
+	    execution is called as , Runtime Arguments.
+		for example:
+		scanf(), getch(), gets(), getc(), getchar()
+		
+		You can take input from these function, or you can supply the input , in these only when program is running in primary memory.		
+		
+	2. Compile Time, Input or Arguments:- The Arguments, supplied 
+		at compile time of the program is called command line arguments.
+		
+		in php we have two super global varibles for this
+		
+		1. $argc : argument count.
+		2. $argv : argument vector or argument variable.
+		3. They will under, only sapi mode = cli.
+		
+php -S localhost:8000
+     |   | CLI-arguments
+	 CLI-arguments
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+
+
+	
+	
+
+
+
+
 
 
 
