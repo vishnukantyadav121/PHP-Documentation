@@ -857,6 +857,117 @@ In Any Programming, langauge there are two types of inputs Environment.
 php -S localhost:8000
      |   | CLI-arguments
 	 CLI-arguments
+	 
+The Properties of Command Line Argument:-
+1. The Command Line arguments are the arguments which supplied at Compile
+   compile time.
+   
+2. $argv : argument vector is responsible to accepting the arguments, 
+	at compile-time.
+3. $argc : holds the no of counts or no of varible arguments supplied,
+4. the type of $argc : is int type
+5. the default size of $argc is : 1
+6. the size of $argc = (n+1) where n is the no of arguments.
+7. $argc and $argv both work only under sapi == cli mode
+8. $argv and $argc are super global varaibles according to PHP standards.
+   in, the super global also they belongs to, category of non-mangled super global varaibles.
+9. $argv is a Hemogenous Array.
+
+   *********************************
+	Note :: In general in Any Programming langauge, Array are collection 
+			of constants Literals,
+			It has following classification
+			
+			1. On the Basis of data.
+			
+				1. Same and same : Homogenous.
+				2. different Type : Hetrogenous.
+				3. mixed Type : Hetrogenous
+				
+			2. On the Basis of Dimension.
+					1. 1-D Array (single Dimension, Linear Array)
+						
+					2. 2-D Array. (Multi-dimensional Array)
+					3. 3-D Array. (Multi-dimensional Array)
+					4. n-D Array. (Multi-dimensional Array)
+					
+			3. On the Basis of Structure/Nature.
+					1. Index Array
+					2. Mapped Array (Key and Value Pair)
+						Note:: There can be n of names, for the Mapped Array.
+						for Eg:
+							python ---> Dictionary
+							Java ---> HashMap
+							C# ---> HashArray
+							Javascript ---> ArrayOfObject
+							PHP ---> Associative Array
+							C++ ---> VectorArray
+							...
+							...
+	******************************************						
+10. $argv has homogenous type as string Array, i.e. is why it is also, 
+	string vector,
+11. the argv supports ssv only (space seperated values).
+12. The datatype of each, element either, float, or int, or boolean	
+	or array everything is converted to string only
+13. if you want supply spaced characters then we need to use "" otherwise
+	it will make all space seperated values as different Argument.
+14. The index 0 is always file_name
+15. Even though php is dynamic langauge, in command line arguments
+	it is stricted to string type, this is because, 0th element
+	index is a filename which is a string value, due to which 
+	the entire elements of different data-type are implicitly
+	converted to, string datatype.
+	
+Q: wap a program to find the sum, of all the Arguments supplied. from 
+Command line and Average 
+
+Hint: $argv, and $argc= count($argv)
+		|Array     |value
+$sum = 0;
+$sum = $sum + $argv[i];
+$avg = $sum/($argv-1)
+
+working with Anonymous Scripts:-
+************************************
+
+What is Meaning of Anonymous script ?
+
+1. Let us, consider a scenerio p1.java ---> what is family name of this program ---> java Family (.java extension)
+p2.py ---> Python Family (.py)
+p2.php ---> php family (.php extension)
+By looking at the extension only, we can Identify, Family or Type of Script.
+A file without extension are called as Anonymous File. and Such File
+are recognised as As FILE or <FILENAME Type>
+
+Why this concept is required?
+CodeIgnitor 4 : spark ---> php file
+Laravel :artisan ---> php file
+zwave :zwave ---> php file
+This is used, so that we can hide our, real code without allowing
+Os, to Identify the file type.
+
+
+Wap to make anonymous script in PHP?
+touch awnish
+start notepad awnish
+write the code of php
+
+ 
+
+
+
+
+
+ 	
+
+	
+	
+	
+	
+	
+	
+
 		
 		
 		
