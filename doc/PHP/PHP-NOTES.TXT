@@ -953,7 +953,89 @@ touch awnish
 start notepad awnish
 write the code of php
 
- 
+varaible to variable reference ($$)
+***********************************
+creating the variable from the reference of existing varible it is denoted by 
+$$.
+use of this concept can be found in, codeIgnitor, laravel, Yii, Frameworks,
+where we want to pass the data from controller to view.
+
+Constants in PHP
+******************
+constant are identifiers which are resposible to hold, single value.
+if we try to assign a new values it will generate error.
+
+or
+The Identifier whose value, remains constant through out the execution of the
+is called as Constant.
+
+There are two types of constants
+1. pre-defined : in php there are 1800+ Predefined Constants.
+2. user-defined : user can create there own constants.
+
+pre-defined  : 
+	get_defined_constants() : list of all predefined constants
+
+Important Predefined Constants
+1. PHP_VERSION : returns version PHP
+2. TRUE : return 1
+3. FALSE : return nothing
+4. NULL : return nothing
+5. PHP_EOL :\r\n newline 
+6. PHP_SAPI : return the sapi name (cli|cli-server|apache2handler)
+7. PHP_OS : return os extension
+8. PHP_OS_FAMILY : returns Os name
+9. STDIN : return the resource object of standard Input.
+10. STDOUT : returns the resource object of standard output.
+11. STDERR : returns the resource object of standard error.
+
+Error Levels Constants: 16
+********************************			
+E_ERROR
+E_RECOVERABLE_ERROR
+E_WARNING
+E_PARSE
+E_NOTICE
+E_STRICT
+E_DEPRECATED
+E_CORE_ERROR
+E_CORE_WARNING
+E_COMPILE_ERROR
+E_COMPILE_WARNING
+E_USER_ERROR
+E_USER_WARNING
+E_USER_NOTICE
+E_USER_DEPRECATED
+E_ALL
+
+
+Errors Tree :
+			ERROR
+				|
+			  strict    			Non Strict (Recoverable)
+              (Encounter)              (warning)
+				1. compile				1. notice
+				2. parse				2. warning
+																						
+				<--------------Two Types ------------->
+					1. core 
+					2. user
+					3. deprecated
+					
+How to create the user-defined constants:-
+****************************************
+1. Procederal : 
+2. OOps : in case of interface, and Abstract Class.
+						
+Syntax of procederal user defined constants:-
+*********************************************
+1.  define('<Indentifier-name>',<value>,<case-sensitive-Boolean>);
+These constants have, global scopes, and can be accessed any-where.
+
+for eg:
+define('gravity',10);
+echo gravity;
+
 
 
 
